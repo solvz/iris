@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/iris-dfx-backend"
+]
+resolver = "2"
