@@ -1,17 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>IC Hello Starter</title>
-  <base href="/" />
-  <link rel="icon" href="/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <hr>
+                    <li><a href="imtl.html">Meet Iris</a></li>
+                    <hr>
+                    <li><a href="#">About Us</a></li>
+                    <hr>
+                    <li><a href="#">Team Vision</a></li>
+                    <hr>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <section class="hero">
+            <div class="container">
+                <style>
+                    body{
+                        font-family: 'Press Start 2P',cursive;
+                    }
+                </style>
+                <h1>Welcome to Iris</h1>
+                <br>
+                <p>Iris is a PDF AI where you can upload your PDF, PPTX, DOCX files into your knowledge base and start a multi-file chat.The ai would sort the your study material and create a series of question that you'll have to answer to save Iris</p>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+                  
+                    .blue-button {
+                      font-family: 'Press Start 2P', cursive; /* add Press Start 2P font */
+                      background-color: #007bff; /* blue color */
+                      color: #ffffff; /* white text color */
+                      border: none;
+                      padding: 10px 20px;
+                      font-size: 16px;
+                      cursor: pointer; /* change the cursor to a pointing hand */
+                      border-radius: 5px;
+                    }
+                  
+                    .blue-button:hover {
+                      background-color: #0069d9; /* darker blue on hover */
+                    }
+                  </style>
+                  
+                  <input type="file" id="fileInput" style="display: none;" />
+                  <button class="blue-button" onclick="handleFileSelect()">Import local file</button>
+                  
+                  <script>
+                    function handleFileSelect() {
+                      document.getElementById('fileInput').click();
+                      document.getElementById('fileInput').addEventListener('change', function() {
+                        // Get the selected file
+                        var file = document.getElementById('fileInput').files[0];
+                        
+                        // Simulate a file upload (replace with your actual upload logic)
+                        console.log('File selected:', file.name);
+                        
+                        // Redirect to another page after file selection
+                        window.location.href = 'next-page.html';
+                      });
+                    }
+                  </script>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Iris. All rights reserved(not really).</p>
+            <a href="#" class="link">Privacy</a>
+            <a href="#" class="link">Terms</a>
+        </div>
+    </footer>
 </body>
-
 </html>
